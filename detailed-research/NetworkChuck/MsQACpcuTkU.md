@@ -48,19 +48,12 @@ This video discusses using AI tools (including Claude Code) in a more efficient 
 - **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
 - **Manual Extraction**: Visit the video and copy notable comments manually
 
-1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
-2. [To be populated]
-3. [To be populated]
-4. [To be populated]
-5. [To be populated]
+| Comment | Author | Engagement |
+|---------|--------|------------|
+| Access your devices securely from anywhere with TwinGate: https://ntck.co/ai_terminal    Still using AI in the browser? You’re doing it the slow way. In this video, I BREAK OUT of the GUI and show ... | @NetworkChuck | 125 👍, 45 💬 |
+| Chuck, at some level this video just changed my life.  I use claude code on my laptop to auto-magically analyze my samba file server, remove duplicates, recommend a new directory structure, and imp... | @jimhehmeyer4850 | 6 👍 |
+| I think it is a bit confusing to say Codex, Gemini, and Claude were all using the same context.  In a loose sense yes they are because it is the same repo and can reference other .md files but each... | @Richard_Rz | 14 👍 |
+
+
 
 ---
-
-## Additional Notes
-
-- This video is categorized under "Pro Claude Code Videos"
-- Notes indicate "non-technical use case"
-- Very high engagement metrics (838K views, 36K likes)
-- Largest channel in this research (4.96M subscribers)
-- Part of the research document for Cursor Team
-

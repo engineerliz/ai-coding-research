@@ -38,17 +38,14 @@ This video demonstrates how the creator uses Claude Code for real engineering pr
 - **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
 - **Manual Extraction**: Visit the video and copy notable comments manually
 
-1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
-2. [To be populated]
-3. [To be populated]
-4. [To be populated]
-5. [To be populated]
+| Comment | Author | Engagement |
+|---------|--------|------------|
+| Does Claude code provide any significant advantage over Cursor for the process you outlined above?  Would you be able to make a Cursor equivalent video? | @hopskipjumpfly | 1 👍, 1 💬 |
+| I was so fed up with the cursor, so today I decided to finally subscribe to Claude Code, but it was a bit confusing and then this video showed up in my feed, what a perfect timing lol , thanks for ... | @NextGenGames0 | 2 👍 |
+| Planning and Setup [00:44] Activate "plan mode" when starting a large task — To ensure Claude Code thinks through the steps first.  [00:50] Always create a plan first for a big piece of work — To f... | @ReflectionOcean | 1 👍 |
+| How do I get my claude code CLI to look like that and why dont you use claudes vs code extension UI | @willaiautomation | 0 👍 |
+| ok, but how is it better than cursor/windsurf? | @other_perfection | 0 👍, 1 💬 |
+
+
 
 ---
-
-## Additional Notes
-
-- This video is categorized under "Pro Claude Code Videos"
-- Channel information needs to be verified
-- Part of the research document for Cursor Team
-

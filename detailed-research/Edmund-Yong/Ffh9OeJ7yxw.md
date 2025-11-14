@@ -38,16 +38,14 @@ This video condenses 800+ hours of learning Claude Code into an 8-minute tutoria
 - **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
 - **Manual Extraction**: Visit the video and copy notable comments manually
 
-1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
-2. [To be populated]
-3. [To be populated]
-4. [To be populated]
-5. [To be populated]
+| Comment | Author | Engagement |
+|---------|--------|------------|
+| Hey man which one do you think is more worth? Cursor or Claude Code? | @ronykax | 0 👍 |
+| Thank you very much for the extremely helpful content. I have a question for you by the way. In the video I see you always using the claude code on terminal not using the vscode extension. Is there... | @DenizPINARLI-w5y | 2 👍 |
+| So if I keep using Claude Code, I never been able to tackle technical interview whenever I wanna apply for jobs because the whole time I just vibe coding? Am I the only one who has this thought? | @VolumeMA | 24 👍, 14 💬 |
+| Is Claude better than Cursor | @rexbear4607 | 2 👍, 3 💬 |
+| I think this video will make me switch from codex to claude | @arditdaku5534 | 3 👍 |
+
+
 
 ---
-
-## Additional Notes
-
-- This video is categorized under "General Cursor/Competitor Videos"
-- Part of the research document for Cursor Team
-

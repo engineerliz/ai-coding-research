@@ -38,17 +38,14 @@ This video provides a comprehensive guide to using Cursor AI for "vibe coding" a
 - **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
 - **Manual Extraction**: Visit the video and copy notable comments manually
 
-1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
-2. [To be populated]
-3. [To be populated]
-4. [To be populated]
-5. [To be populated]
+| Comment | Author | Engagement |
+|---------|--------|------------|
+| should i use cursor,codex or claude code | @Kryden-s3l | 3 👍, 1 💬 |
+| Brev started using cursor 2.0 today after using codex 5 high, it’s sik tbf, multi agent is mad | @Ms-b8t | 0 👍 |
+| I wonder what tier of Cursor subscription is used here. I started building (as a noob) and ran up a high usage and tapped out of the free in just two days. Trying to figure out now how to save on u... | @andreduval | 1 👍 |
+| Thanks Corbin for this series. Is it possible to build this just with Google AI Studio with or without Google Firebase (+ Google Cloud to host it)? I mean just with the Google ecosystem without usi... | @chetanmashru | 1 👍, 2 💬 |
+| your thoughts about Replit? I made a small web app with it and deployed it and it was pretty good. I have trouble deploying without that 1-click deployment Replit has, but I feel as replit can't ma... | @AceSiz824 | 1 👍, 2 💬 |
+
+
 
 ---
-
-## Additional Notes
-
-- This video is categorized under "General Cursor/Competitor Videos"
-- Channel information needs to be verified
-- Part of the research document for Cursor Team
-

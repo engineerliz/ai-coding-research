@@ -38,16 +38,12 @@ This video reveals 5 lesser-known features of Cursor 2.0, showcasing hidden capa
 - **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
 - **Manual Extraction**: Visit the video and copy notable comments manually
 
-1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
-2. [To be populated]
-3. [To be populated]
-4. [To be populated]
-5. [To be populated]
+| Comment | Author | Engagement |
+|---------|--------|------------|
+| Cursor is training its model on all user code, even those who opted out, and claude models output, but I just can't prove it yet. | @amine7 | 1395 👍, 22 💬 |
+| "I realized I made this entire story up in my head". The result of every other Cursor vibe coding sessions | @philkellr | 137 👍 |
+| Cursor update is how can we make sure we increase unnecessary token consumption | @CodeMotionLabs | 71 👍, 1 💬 |
+
+
 
 ---
-
-## Additional Notes
-
-- This video is categorized under "General Cursor/Competitor Videos"
-- Part of the research document for Cursor Team
-

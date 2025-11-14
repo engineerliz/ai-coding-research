@@ -38,17 +38,14 @@ This video provides a comprehensive, unbiased comparison between Cursor and Clau
 - **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
 - **Manual Extraction**: Visit the video and copy notable comments manually
 
-1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
-2. [To be populated]
-3. [To be populated]
-4. [To be populated]
-5. [To be populated]
+| Comment | Author | Engagement |
+|---------|--------|------------|
+| I feel like the better you are at code and development, the better Cursor is than Claude Code | @MatheusLB2009 | 22 👍, 4 💬 |
+| "Claude code builds the house, cursor paints the walls" - Amazing explanation. Deserves a subscribe | @usamayousuf3778 | 4 👍 |
+| This is a great, to-the-point comparison video. I have used Claude code a bit and wanted to know about Cursor, and this video told me everything I needed to know, thanks! :) | @Netherzoon | 0 👍 |
+| The answer is codex with the extension inside of cursor | @filipevalentegomes2383 | 6 👍, 1 💬 |
+| I was actually looking for this kind of comparison, and I’ve even been thinking of making similar videos myself. Honestly, I feel the same way you explained 😊. Cloude burns way more money, while Cu... | @prakashkaushik6358 | 0 👍 |
+
+
 
 ---
-
-## Additional Notes
-
-- This video is categorized under "Pro Claude Code Videos"
-- Notes indicate this is an "unbiased" comparison
-- Part of the research document for Cursor Team
-

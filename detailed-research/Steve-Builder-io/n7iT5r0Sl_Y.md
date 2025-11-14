@@ -39,17 +39,14 @@ This video shares the creator's experience using Claude Code and provides their 
 - **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
 - **Manual Extraction**: Visit the video and copy notable comments manually
 
-1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
-2. [To be populated]
-3. [To be populated]
-4. [To be populated]
-5. [To be populated]
+| Comment | Author | Engagement |
+|---------|--------|------------|
+| As a 25+ year dev Claude Code has completely changed the way I code. I know how to create quality code, quality architectures cause I've done them like 40 times at this point.  So now I just guide ... | @otockian | 262 👍, 10 💬 |
+| 🎯 Key points for quick navigation:  00:05 *🚀 Transitioned from Cursor's agent to Claude Code and found it more efficient.* 02:18 *⚙️ Claude Code extension simplifies launching directly in IDEs like... | @bogdansandor | 1 👍 |
+| Was watching the video up until I heard you say "While it runs a minor risk that it can run a rogue command that's destructive, I've never had it happen." and to suggest doing it anyway is such a d... | @TheParog | 27 👍 |
+| 2:02 - You can add a hook to send you a system sound notification just like cursor does whenever Claude needs your input or has completed a task. You can find the info in the documentation | @danifrim | 13 👍, 1 💬 |
+| Great thanks for this. You provide a lot of valuable insights on how to use Claude  instead of cursor. | @HammerTNL | 0 👍 |
+
+
 
 ---
-
-## Additional Notes
-
-- This video is categorized under "Pro Claude Code Videos"
-- Creator is from Builder.io with 136K subscribers
-- Part of the research document for Cursor Team
-

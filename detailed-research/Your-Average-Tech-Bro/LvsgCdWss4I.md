@@ -37,16 +37,14 @@ The video demonstrates an AI-powered coding workflow using Cursor to build apps 
 - **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
 - **Manual Extraction**: Visit the video and copy notable comments manually
 
-1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
-2. [To be populated]
-3. [To be populated]
-4. [To be populated]
-5. [To be populated]
+| Comment | Author | Engagement |
+|---------|--------|------------|
+| Super good information, would be also very interesting to see an actual demonstration of your workflow with the screenshot + Magic Patterns and how you use cursor+rules+mcp. | @ivanfranciscoj | 27 👍, 1 💬 |
+| that guy is rapid fire !! I am french  but I could still understand. Thanks for the sharing. Now starting my journey to use the same stack supabase+cursor ai+manjaro+nextjs+tailwindcssui+whatever. | @itscooldawgdonteventrip | 1 👍, 1 💬 |
+| Awesome, for me it also works to start in bolt before moving to cursor. I've found that bolt is great for the boilerplate UI Layer and I then export the code directly to Cursor and build from there... | @eugeniocastro5118 | 9 👍, 1 💬 |
+| 7:12 lol, exactly my experience with cursor and cloud, and I'm like no wrf stop acting on ur own u work for me u do exactly what i say !! | @NextGenGames0 | 5 👍 |
+| Thank you a couple of aha moments there to improve my Cursor workflow. | @paulsaunders2320 | 0 👍 |
+
+
 
 ---
-
-## Additional Notes
-
-- This video is categorized under "General Cursor/Competitor Videos"
-- Part of the research document for Cursor Team
-

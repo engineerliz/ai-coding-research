@@ -38,17 +38,14 @@ This video discusses the creator's switch from Cursor to Claude Code, explaining
 - **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
 - **Manual Extraction**: Visit the video and copy notable comments manually
 
-1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
-2. [To be populated]
-3. [To be populated]
-4. [To be populated]
-5. [To be populated]
+| Comment | Author | Engagement |
+|---------|--------|------------|
+| You don't need to pay for Cursor to use Claude Code within the Cursor VSC fork. :) | @localism479 | 0 👍 |
+| Switching from Cursor to Claude Code? Bold move. Love seeing real workflow breakdowns instead of just hype. Thanks for sharing the pros and cons. Curious to see how this holds up after a few big pr... | @b2brish | 11 👍 |
+| Switching to Claude Code sounds cool! I'm curious if Codoki integrates as seamlessly into your workflow. It’s been a lifesaver for keeping my GitHub repos clean! | @TauqeerAwan185 | 78 👍 |
+| Hard agree. Moved to Claude Code & Convex 3 days ago, and now Cursor & Supabase feel so inadequate. | @deep_indi | 3 👍 |
+| Sounds slick! How does Claude Code compare to Cursor for debugging or autocomplete? | @jitcoding | 1 👍 |
+
+
 
 ---
-
-## Additional Notes
-
-- This video is categorized under "Pro Claude Code Videos"
-- Represents a user switching from Cursor to Claude Code
-- Part of the research document for Cursor Team
-
