@@ -33,11 +33,16 @@ This video reveals 5 lesser-known features of Cursor 2.0, showcasing hidden capa
 
 ### Notable Comments
 
-1. [Needs extraction from video comments section]
-2. [Needs extraction from video comments section]
-3. [Needs extraction from video comments section]
-4. [Needs extraction from video comments section]
-5. [Needs extraction from video comments section]
+**Note**: To extract comments, use one of these methods:
+- **YouTube Data API**: Use the provided `extract_comments.py` script with a YouTube API key
+- **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
+- **Manual Extraction**: Visit the video and copy notable comments manually
+
+1. [To be populated - Extract top 5 comments by engagement (likes + replies)]
+2. [To be populated]
+3. [To be populated]
+4. [To be populated]
+5. [To be populated]
 
 ---
 
