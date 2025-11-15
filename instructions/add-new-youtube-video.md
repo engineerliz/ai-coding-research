@@ -34,10 +34,13 @@ This playbook walks you through adding a fresh video analysis entry to the repo 
    - **Views** (use the value shown on YouTube at collection time)
    - **Upload Date** (MM/DD/YYYY)
 3. Write the Summary (2–4 sentences referencing the video’s core claims, workflows, and audience takeaways).
-4. Fill in the Comment Analysis section:
-   - `Common Themes` (bullet list, 3–5 items)
-   - `Criticisms`, `Praise`, or other custom bullets as needed to reflect the comment mix
-   - `Notable Comments` table (up to 20 entries, capture comment text, date, and engagement)
+4. Fill in the Comment Analysis section using ONLY comments that mention Cursor, Claude Code, Codex, Windsurf, or any other AI coding assistant (ignore everything else):
+   - `Common Themes` must follow this exact order:  
+     1. 2–3 sentence narrative summary of the filtered comments.  
+     2. `Repeating themes:` list (pricing, speed, reliability, features, etc.).  
+     3. `Criticisms:` bullet list calling out issues raised about AI coding tools.  
+     4. `Praise:` bullet list for positive takes on AI coding tools.
+   - `Notable Comments` table should contain 15–20 rows when possible, sorted by engagement (likes + replies), include the full untruncated comment text, date, and engagement numbers, omit author names, exclude any comments from the channel owner, and show only comments that reference the AI tools listed above.
 5. Save the file as `/Users/liz/dev/cursor-research/creators/{Creator}/youtube/{VideoTitle}.md`.
 
 ### Markdown Snippet
@@ -67,14 +70,29 @@ This playbook walks you through adding a fresh video analysis entry to the repo 
 
 ### Common Themes
 
-{bullet list}
+{2-3 sentence summary of comments about Cursor/Claude Code/etc.}
+
+**Repeating themes:** {comma-separated list}
+
+**Criticisms:**
+- {bulletized complaints about AI tools}
+
+**Praise:**
+- {bulletized positive remarks about AI tools}
 
 ### Notable Comments
 
 | Comment | Date | Engagement |
 |---------|------|------------|
-| … | … | … |
+| {Full comment text mentioning Cursor/Claude/etc.} | {MM/DD/YYYY} | {e.g., 12 👍, 3 💬} |
 `````
+
+#### Comment Analysis Rules Recap
+
+- Capture only comments that name Cursor, Claude Code, Codex, Windsurf, or another AI coding tool.
+- Aim for 15–20 rows; if fewer exist, note it directly under the table (e.g., “Only 9 qualifying comments available as of 11/15/2025.”).
+- Sort by engagement (likes + replies) descending.
+- Include the full comment text (no truncation), its posting date, and engagement numbers. Omit author names and skip any comment made by the creator’s own account.
 
 ---
 
