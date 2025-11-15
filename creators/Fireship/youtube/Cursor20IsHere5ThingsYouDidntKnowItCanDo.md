@@ -1,4 +1,5 @@
-# Video Analysis: HIp8sFB2GGw
+# Cursor 2.0 is here... 5 things you didn't know it can do
+![Video thumbnail](https://img.youtube.com/vi/HIp8sFB2GGw/maxresdefault.jpg)
 
 ## Video Information
 

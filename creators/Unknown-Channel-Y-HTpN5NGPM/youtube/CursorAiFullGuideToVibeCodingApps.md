@@ -1,4 +1,5 @@
-# Video Analysis: Y-HTpN5NGPM
+# Cursor AI Full Guide To Vibe Coding Apps
+![Video thumbnail](https://img.youtube.com/vi/Y-HTpN5NGPM/maxresdefault.jpg)
 
 ## Video Information
 

@@ -1,4 +1,5 @@
-# Video Analysis: wsIb_EdhcY8
+# My New AI Coding Workflow To Build Apps Fast (Goodbye Cursor, Hello Claude Code)
+![Video thumbnail](https://img.youtube.com/vi/wsIb_EdhcY8/maxresdefault.jpg)
 
 ## Video Information
 

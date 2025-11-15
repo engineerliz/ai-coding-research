@@ -1,4 +1,5 @@
-# Video Analysis: LvsgCdWss4I
+# Sharing My AI-Powered Coding Workflow To Build Apps REALLY Fast
+![Video thumbnail](https://img.youtube.com/vi/LvsgCdWss4I/maxresdefault.jpg)
 
 ## Video Information
 

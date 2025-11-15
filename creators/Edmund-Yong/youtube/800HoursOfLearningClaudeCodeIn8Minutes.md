@@ -1,4 +1,5 @@
-# Video Analysis: Ffh9OeJ7yxw
+# 800+ hours of Learning Claude Code in 8 minutes (2026 tutorial / unknown tricks / newest model)
+![Video thumbnail](https://img.youtube.com/vi/Ffh9OeJ7yxw/maxresdefault.jpg)
 
 ## Video Information
 

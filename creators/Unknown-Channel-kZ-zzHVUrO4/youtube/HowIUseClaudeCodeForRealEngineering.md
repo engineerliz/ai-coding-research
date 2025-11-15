@@ -1,4 +1,5 @@
-# Video Analysis: kZ-zzHVUrO4
+# How I use Claude Code for real engineering
+![Video thumbnail](https://img.youtube.com/vi/kZ-zzHVUrO4/maxresdefault.jpg)
 
 ## Video Information
 

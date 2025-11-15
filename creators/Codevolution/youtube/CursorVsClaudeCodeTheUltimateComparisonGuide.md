@@ -1,4 +1,5 @@
-# Video Analysis: OSBo9qcpRfw
+# Cursor vs Claude Code | The Ultimate Comparison Guide
+![Video thumbnail](https://img.youtube.com/vi/OSBo9qcpRfw/maxresdefault.jpg)
 
 ## Video Information
 

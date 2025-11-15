@@ -1,4 +1,5 @@
-# Video Analysis: MsQACpcuTkU
+# You've Been Using AI the Hard Way (Use This Instead)
+![Video thumbnail](https://img.youtube.com/vi/MsQACpcuTkU/maxresdefault.jpg)
 
 ## Video Information
 
