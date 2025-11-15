@@ -7,8 +7,8 @@
 - **Video URL**: https://www.youtube.com/watch?v=Ffh9OeJ7yxw
 - **Title**: "800+ hours of Learning Claude Code in 8 minutes (2026 tutorial / unknown tricks / newest model)"
 - **Channel**: Edmund Yong
-- **Views**: [To be verified]
-- **Upload Date**: [To be verified]
+- **Views**: 175,464
+- **Upload Date**: 10/27/2025
 
 ---
 

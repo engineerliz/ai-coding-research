@@ -7,8 +7,8 @@
 - **Video URL**: https://www.youtube.com/watch?v=HIp8sFB2GGw
 - **Title**: "Cursor 2.0 is here... 5 things you didn't know it can do"
 - **Channel**: Fireship
-- **Views**: [To be verified]
-- **Upload Date**: [To be verified]
+- **Views**: 946,226
+- **Upload Date**: 10/30/2025
 
 ---
 
