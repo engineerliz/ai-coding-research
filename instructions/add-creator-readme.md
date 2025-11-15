@@ -14,8 +14,8 @@ Add a `README.md` in every creator directory under `/Users/liz/dev/cursor-resear
    - Populate `Followers/Subscribers` with the latest known counts. If a platform is inactive or unknown, write `N/A` but keep the row.
 
 3. **Notable Content**
-   - Bullet list highlighting standout posts or videos from any active platform.
-   - Each bullet should include the platform, title/description, and (if available) a link.
+   - Bullet list highlighting standout posts or videos specifically about AI-powered coding workflows, tools, or experiments on any active platform.
+   - Each bullet should include the platform, title/description with the AI-coding angle, and (if available) a link.
 
 ## Format Notes
 - Use standard Markdown headings: `## Overview`, `## Social Platforms`, `## Notable Content`.
