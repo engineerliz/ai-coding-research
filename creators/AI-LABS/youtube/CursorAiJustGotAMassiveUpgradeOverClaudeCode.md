@@ -24,13 +24,7 @@ This video discusses how Cursor AI has received a massive upgrade that puts it a
 
 [Needs detailed analysis - Likely includes discussions about new Cursor features, comparisons with Claude Code, debates about which tool is better, feature requests]
 
-### Common Questions
 
-[Needs detailed analysis - Questions about specific upgrades, feature comparisons, migration considerations, performance differences]
-
-### Sentiment
-
-[Needs detailed analysis - Mixed sentiment expected, with Cursor users excited and Claude Code users possibly defensive]
 
 ### Notable Comments
 

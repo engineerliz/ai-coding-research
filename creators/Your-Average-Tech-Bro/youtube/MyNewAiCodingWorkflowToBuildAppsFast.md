@@ -23,13 +23,7 @@ This video discusses the creator's switch from Cursor to Claude Code, explaining
 
 [Needs detailed analysis - Likely includes discussions about switching between tools, comparisons between Cursor and Claude Code, workflow improvements]
 
-### Common Questions
 
-[Needs detailed analysis - Questions about why they switched, specific feature comparisons, pros and cons of each tool]
-
-### Sentiment
-
-[Needs detailed analysis - Mixed sentiment expected, with users sharing their own experiences with both tools]
 
 ### Notable Comments
 

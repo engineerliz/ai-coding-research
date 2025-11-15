@@ -23,13 +23,7 @@ This video reveals 5 lesser-known features of Cursor 2.0, showcasing hidden capa
 
 [Needs detailed analysis - Likely includes surprise about hidden features, discussions about feature usage, questions about implementation]
 
-### Common Questions
 
-[Needs detailed analysis - Questions about specific features, how to access them, comparisons with previous versions]
-
-### Sentiment
-
-[Needs detailed analysis - Likely positive and curious, with users excited about discovering new features]
 
 ### Notable Comments
 

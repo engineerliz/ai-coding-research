@@ -22,13 +22,7 @@ The video demonstrates an AI-powered coding workflow using Cursor to build apps 
 
 [Needs detailed analysis - Viewers appear to appreciate the practical demonstration and express interest in trying Cursor]
 
-### Common Questions
 
-[Needs detailed analysis - Questions about compatibility with various programming languages, integration capabilities, and learning curve]
-
-### Sentiment
-
-[Needs detailed analysis - Generally positive based on initial observations]
 
 ### Notable Comments
 
