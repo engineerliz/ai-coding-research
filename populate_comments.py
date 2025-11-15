@@ -8,27 +8,54 @@ and excludes channel owner comments.
 import os
 import sys
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Dict, Optional
 
-# Import functions from extract_comments.py
-from extract_comments import (
-    get_video_comments,
-    get_youtube_service
-)
+get_video_comments = None
+get_youtube_service = None
+
+
+def _ensure_extract_comments_loaded() -> None:
+    """Lazily import extract_comments functions only when needed."""
+    global get_video_comments, get_youtube_service
+    if get_video_comments is not None and get_youtube_service is not None:
+        return
+    
+    try:
+        from extract_comments import (  # type: ignore import-not-found
+            get_video_comments as _get_video_comments,
+            get_youtube_service as _get_youtube_service,
+        )
+    except ImportError as exc:  # pragma: no cover - import-time safeguard
+        raise ImportError(
+            "extract_comments dependencies are missing. "
+            "Install google-api-python-client (and python-dotenv) to use the API-powered workflow."
+        ) from exc
+    
+    get_video_comments = _get_video_comments
+    get_youtube_service = _get_youtube_service
 
 
 # Keywords to identify relevant comments about Cursor and competitors
 RELEVANT_KEYWORDS = [
-    'cursor', 'claude code', 'claudecode', 'codex', 'github copilot', 'copilot',
-    'codium', 'tabnine', 'codeium', 'amazon codewhisperer', 'codewhisperer',
-    'cursor ai', 'cursor ide', 'cursor editor', 'cursor vs', 'vs cursor',
+    # Cursor & variants
+    'cursor', 'cursor ai', 'cursor ide', 'cursor editor', 'cursor cli',
+    'cursor vs', 'vs cursor', 'cursor features', 'cursor pricing',
+    'cursor cost', 'cursor subscription', 'cursor update', 'cursor upgrade',
     'switch to cursor', 'switched to cursor', 'migrate to cursor',
     'switch from cursor', 'switched from cursor', 'migrate from cursor',
     'cursor alternative', 'cursor competitor', 'cursor replacement',
-    'better than cursor', 'cursor vs claude', 'claude vs cursor',
-    'cursor pricing', 'cursor cost', 'cursor subscription',
-    'cursor features', 'cursor update', 'cursor upgrade'
+    # Claude family
+    'claude code', 'claudecode', 'claude desktop', 'claude', 'sonnet', 'opus',
+    'claude vs cursor', 'cursor vs claude',
+    # Other AI coding tools
+    'codex', 'windsurf', 'github copilot', 'copilot', 'tabnine', 'codium',
+    'codeium', 'amazon codewhisperer', 'codewhisperer', 'code whisperer',
+    'replit', 'replit agent', 'blackbox', 'aider', 'phind', 'supermaven',
+    'devin', 'gemini', 'chatgpt', 'gpt-4', 'gpt4', 'gpt-5', 'gpt5',
+    'moonbeam', 'bolt.new', 'bolt new', 'kiro', 'deepseek', 'aws q developer',
+    'q developer', 'codegeex', 'cursor competitor', 'cursor alternative'
 ]
 
 
@@ -45,6 +72,7 @@ def extract_channel_name_from_markdown(content: str) -> Optional[str]:
 
 def get_channel_owner_from_video(video_id: str, api_key: str) -> Optional[Dict]:
     """Get channel owner information from video metadata."""
+    _ensure_extract_comments_loaded()
     try:
         youtube = get_youtube_service(api_key)
         request = youtube.videos().list(
@@ -71,125 +99,143 @@ def is_relevant_comment(comment_text: str) -> bool:
     return any(keyword in text_lower for keyword in RELEVANT_KEYWORDS)
 
 
+def _normalize_author_name(name: str) -> str:
+    """Normalize an author or channel name for comparison."""
+    if not name:
+        return ''
+    normalized = name.strip().lower()
+    normalized = normalized.lstrip('@')
+    normalized = re.sub(r'\s*\([^)]+\)\s*$', '', normalized)
+    normalized = re.sub(r'[^a-z0-9]+', '', normalized)
+    return normalized
+
+
 def is_channel_owner_comment(comment: Dict, channel_info: Optional[Dict], channel_name: Optional[str]) -> bool:
     """Check if comment is from the channel owner."""
-    author = comment.get('author', '').lower()
+    if comment.get('author_is_uploader'):
+        return True
+    
+    author_norm = _normalize_author_name(comment.get('author', ''))
+    if not author_norm:
+        return False
     
     # Check against channel title
     if channel_info and channel_info.get('channel_title'):
-        channel_title = channel_info['channel_title'].lower()
-        # Remove common suffixes
-        channel_title_clean = re.sub(r'\s*\([^)]+\)\s*$', '', channel_title)
-        if author == channel_title_clean.lower() or author == channel_title.lower():
+        channel_title_norm = _normalize_author_name(channel_info['channel_title'])
+        if author_norm == channel_title_norm:
             return True
     
     # Check against channel name from markdown
     if channel_name:
-        channel_name_clean = re.sub(r'\s*\([^)]+\)\s*$', '', channel_name).lower()
-        if author == channel_name_clean.lower() or author == channel_name.lower():
+        channel_name_norm = _normalize_author_name(channel_name)
+        if author_norm == channel_name_norm:
             return True
-    
-    # Check for verified channel owner (often has channel ID)
-    # Note: We can't easily check this without additional API calls, so we rely on name matching
     
     return False
 
 
-def calculate_relevance_score(comment_text: str) -> int:
-    """Calculate relevance score based on keyword matches."""
-    text_lower = comment_text.lower()
-    score = 0
-    
-    # Higher weight for direct mentions
-    if 'cursor' in text_lower:
-        score += 10
-    if 'claude code' in text_lower or 'claudecode' in text_lower:
-        score += 8
-    if 'codex' in text_lower:
-        score += 6
-    
-    # Medium weight for comparisons
-    if 'vs' in text_lower and ('cursor' in text_lower or 'claude' in text_lower):
-        score += 5
-    if 'switch' in text_lower or 'migrate' in text_lower:
-        score += 4
-    
-    # Lower weight for other mentions
-    for keyword in RELEVANT_KEYWORDS:
-        if keyword in text_lower:
-            score += 1
-    
-    return score
-
-
 def get_notable_comments(comments: List[Dict], channel_info: Optional[Dict], 
-                        channel_name: Optional[str], top_n: int = 5) -> List[Dict]:
+                        channel_name: Optional[str], top_n: int = 20) -> List[Dict]:
     """
     Select notable comments based on relevance and engagement.
     Filters for Cursor/competitor-related comments and excludes channel owner.
     """
-    # Filter out replies for top-level notable comments
-    top_level = [c for c in comments if not c.get('is_reply', False)]
-    
-    # Filter for relevant comments
     relevant = []
-    for comment in top_level:
+    for comment in comments:
         text = comment.get('text', '')
         
-        # Skip if not relevant
-        if not is_relevant_comment(text):
+        if not text or not is_relevant_comment(text):
             continue
         
-        # Skip if from channel owner
         if is_channel_owner_comment(comment, channel_info, channel_name):
             continue
         
-        # Calculate scores
-        relevance_score = calculate_relevance_score(text)
-        engagement_score = comment.get('likes', 0) + (comment.get('reply_count', 0) * 2)
-        
-        # Combined score: relevance * 10 + engagement (prioritizes relevance but considers engagement)
-        comment['relevance_score'] = relevance_score
+        likes = comment.get('likes', 0)
+        reply_count = comment.get('reply_count', 0)
+        engagement_score = likes + reply_count
         comment['engagement_score'] = engagement_score
-        comment['combined_score'] = (relevance_score * 10) + engagement_score
-        
         relevant.append(comment)
     
-    # Sort by combined score (relevance prioritized)
-    relevant.sort(key=lambda x: x.get('combined_score', 0), reverse=True)
+    relevant.sort(
+        key=lambda x: (
+            x.get('engagement_score', 0),
+            x.get('likes', 0),
+            _get_comment_timestamp(x)
+        ),
+        reverse=True
+    )
     
     return relevant[:top_n]
+
+
+def _get_comment_timestamp(comment: Dict) -> int:
+    """Return a comparable timestamp for sorting (UTC seconds)."""
+    published_at = comment.get('published_at') or comment.get('updated_at')
+    if published_at:
+        try:
+            dt = datetime.fromisoformat(
+                published_at.replace('Z', '+00:00')
+            )
+            return int(dt.timestamp())
+        except ValueError:
+            pass
+    
+    if comment.get('timestamp'):
+        try:
+            return int(comment['timestamp'])
+        except (TypeError, ValueError):
+            return 0
+    
+    return 0
 
 
 def format_comments_as_table(notable_comments: List[Dict]) -> str:
     """Format comments as a markdown table."""
     if not notable_comments:
-        return "| Comment | Author | Engagement |\n|---------|--------|------------|\n| *No relevant comments found* | - | - |\n"
+        return "| Comment | Date | Engagement |\n|---------|------|------------|\n| *No relevant comments found* | - | - |\n"
     
-    table = "| Comment | Author | Engagement |\n"
-    table += "|---------|--------|------------|\n"
+    table = "| Comment | Date | Engagement |\n"
+    table += "|---------|------|------------|\n"
     
     for comment in notable_comments:
-        text = comment.get('text', '').replace('\n', ' ').strip()
-        author = comment.get('author', 'Unknown')
+        text = comment.get('text', '').replace('\n', '<br>').strip()
         likes = comment.get('likes', 0)
         reply_count = comment.get('reply_count', 0)
-        
-        # Truncate very long comments
-        if len(text) > 200:
-            text = text[:197] + "..."
+        engagement_parts = [f"{likes} 👍"]
+        if reply_count > 0:
+            engagement_parts.append(f"{reply_count} 💬")
+        engagement = ", ".join(part for part in engagement_parts if part)
         
         # Escape pipe characters in text
         text = text.replace('|', '\\|')
-        author = author.replace('|', '\\|')
         
-        engagement = f"{likes} 👍"
-        if reply_count > 0:
-            engagement += f", {reply_count} 💬"
+        table += f"| {text} | {format_comment_date(comment)} | {engagement or '0 👍'} |\n"
         
-        table += f"| {text} | {author} | {engagement} |\n"
-    
     return table
+
+
+def format_comment_date(comment: Dict) -> str:
+    """Return yyyy-mm-dd date for the comment."""
+    published_at = comment.get('published_at') or comment.get('updated_at')
+    if published_at:
+        try:
+            dt = datetime.fromisoformat(published_at.replace('Z', '+00:00'))
+            return dt.strftime('%Y-%m-%d')
+        except ValueError:
+            pass
+    
+    if comment.get('timestamp'):
+        try:
+            dt = datetime.fromtimestamp(int(comment['timestamp']), tz=timezone.utc)
+            return dt.strftime('%Y-%m-%d')
+        except (TypeError, ValueError, OSError):
+            pass
+    
+    relative = comment.get('_time_text')
+    if relative:
+        return relative
+    
+    return '-'
 
 
 def update_markdown_with_comments(markdown_path: Path, notable_comments: List[Dict]) -> bool:
@@ -213,10 +259,12 @@ def update_markdown_with_comments(markdown_path: Path, notable_comments: List[Di
             return False
         
         # Generate the new comments section
-        comments_text = "**Note**: To extract comments, use one of these methods:\n"
-        comments_text += "- **YouTube Data API**: Use the provided `extract_comments.py` script with a YouTube API key\n"
-        comments_text += "- **Browser Extension**: Use a Chrome extension like \"YouTube Comment Exporter\" \n"
-        comments_text += "- **Manual Extraction**: Visit the video and copy notable comments manually\n\n"
+        generated_at = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+        comments_text = (
+            f"**Note**: Comments captured on {generated_at} and filtered for explicit mentions "
+            "of Cursor, Claude Code, Codex, Windsurf, or other AI coding tools. "
+            "Sorted by engagement (likes + replies) and capped at 20 entries.\n\n"
+        )
         
         # Add table
         comments_text += format_comments_as_table(notable_comments) + "\n"
@@ -246,6 +294,7 @@ def update_markdown_with_comments(markdown_path: Path, notable_comments: List[Di
 
 def process_all_markdown_files(research_dir: Path, api_key: str, max_comments: int = 100):
     """Process all markdown files in the research directory."""
+    _ensure_extract_comments_loaded()
     # Find all markdown files
     md_files = list(research_dir.rglob("*.md"))
     

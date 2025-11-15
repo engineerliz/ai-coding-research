@@ -33,18 +33,30 @@ This video discusses the creator's switch from Cursor to Claude Code, explaining
 
 ### Notable Comments
 
-**Note**: To extract comments, use one of these methods:
-- **YouTube Data API**: Use the provided `extract_comments.py` script with a YouTube API key
-- **Browser Extension**: Use a Chrome extension like "YouTube Comment Exporter" 
-- **Manual Extraction**: Visit the video and copy notable comments manually
+**Note**: Comments captured on 2025-11-15 and filtered for explicit mentions of Cursor, Claude Code, Codex, Windsurf, or other AI coding tools. Sorted by engagement (likes + replies) and capped at 20 entries.
 
-| Comment | Author | Engagement |
-|---------|--------|------------|
-| You don't need to pay for Cursor to use Claude Code within the Cursor VSC fork. :) | @localism479 | 0 👍 |
-| Switching from Cursor to Claude Code? Bold move. Love seeing real workflow breakdowns instead of just hype. Thanks for sharing the pros and cons. Curious to see how this holds up after a few big pr... | @b2brish | 11 👍 |
-| Switching to Claude Code sounds cool! I'm curious if Codoki integrates as seamlessly into your workflow. It’s been a lifesaver for keeping my GitHub repos clean! | @TauqeerAwan185 | 78 👍 |
-| Hard agree. Moved to Claude Code & Convex 3 days ago, and now Cursor & Supabase feel so inadequate. | @deep_indi | 3 👍 |
-| Sounds slick! How does Claude Code compare to Cursor for debugging or autocomplete? | @jitcoding | 1 👍 |
+| Comment | Date | Engagement |
+|---------|------|------------|
+| AI has made me lazy to the point where i feel guilty. I haven't so much as written an 'if' statement in six months. Why bother with potential human syntax errors when you can just say to Claude 'yea write me a function to bop through that array and break if there are any nulls and oh yea-- optimize this base class there's a good lad" <br>I don't even write emails any more, I just generate some bs and 'sign off' on the one I like. Geez Louise.. <br><br>It is wonderful though, this is how farmers must've felt when the first mechanical seed drills came along.  Bravo Geoffrey Hinton and co- I know it'll annihilate us in the end but whatever. | 2025-07-15 | 149 👍 |
+| Switching to Claude Code sounds cool! I'm curious if Codoki integrates as seamlessly into your workflow. It’s been a lifesaver for keeping my GitHub repos clean! | 2025-10-25 | 78 👍 |
+| Claude Code's ability to handle different models is impressive! I log my AI data with AiCarmae occasionally. Thanks for explaining the pricing tiers so well. | 2025-09-15 | 56 👍 |
+| I grew up with a terminal interface, so I actually prefer it. One suggestion, from experience, make a branch of your your code base, and have Claude Code work with that branch, and then merge changes in when satisfied, it will save headaches later on if it does something wrong. | 2025-07-15 | 46 👍 |
+| claude code gang 🤝 | 2025-07-15 | 33 👍 |
+| You made a great point about the speed-performance trade-off with Claude Code. i use aiCarma to occasionally check my brand's AI presence. Really informative video! | 2025-09-15 | 26 👍 |
+| The integration with Jet Brains and VS Code makes Claude Code super versatile. I've been using AICarma lately to monitor my brand's AI mentions. Nice breakdown of the workflow! | 2025-09-15 | 20 👍 |
+| Claude Code sounds solid, but it definitely lacks the no-code ease that Pneumatic Workflow offers. I love how I can build workflows without writing a single line of code. | 2025-11-13 | 18 👍 |
+| Interesting how Claude Code operates solely in the terminal, which seems to enhance performance. I also manage some reports using AICarma. Solid insights in the video! | 2025-09-15 | 12 👍 |
+| Switching from Cursor to Claude Code? Bold move. Love seeing real workflow breakdowns instead of just hype. Thanks for sharing the pros and cons. Curious to see how this holds up after a few big projects. | 2025-07-15 | 11 👍 |
+| started using claude code yesterday and my experience is the same as yours... it understands more without providing as much context and makes fewer mistakes. it's actually unreal. | 2025-07-15 | 10 👍 |
+| why not use VS Code + Cline (w/ claude code)? | 2025-07-15 | 6 👍 |
+| Claude code is the future, a company talking to me couldn’t believe I did their whole process with Claude 😂😂😂 | 2025-07-15 | 6 👍 |
+| hope claude code keeps getting better & better cheaper & cheaper | 2025-07-15 | 4 👍 |
+| Hard agree. Moved to Claude Code & Convex 3 days ago, and now Cursor & Supabase feel so inadequate. | 2025-07-15 | 3 👍 |
+| try claude code chat extension it's a gui wrapped around claude code | 2025-08-15 | 2 👍 |
+| What sucks about Claude Code is you're stuck with Claude, and can't use better models like Grok 4. | 2025-07-15 | 2 👍 |
+| What do you think about gemini cli in comparison to these tools. | 2025-07-15 | 2 👍 |
+| Has anyone had a better experience using Claude Code Pro? For those on a budget who are currently using Cursor for $20/month, is it worth switching to Claude Pro? | 2025-07-15 | 2 👍 |
+| claude code is state of the art. because its based in the terminal. i dont even have vs code installed anymore! | 2025-07-15 | 2 👍 |
 
 
 
