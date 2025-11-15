@@ -1,5 +1,5 @@
 # Cursor AI Just Got a Massive Upgrade Over Claude Code
-![Video thumbnail](https://img.youtube.com/vi/WKy71aZHx20/maxresdefault.jpg)
+<img src="https://img.youtube.com/vi/WKy71aZHx20/maxresdefault.jpg" alt="Video thumbnail" width="600" />
 
 ## Video Information
 

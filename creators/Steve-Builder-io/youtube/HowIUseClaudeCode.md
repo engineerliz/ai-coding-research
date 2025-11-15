@@ -1,5 +1,5 @@
 # How I use Claude Code (+ my best tips)
-![Video thumbnail](https://img.youtube.com/vi/n7iT5r0Sl_Y/maxresdefault.jpg)
+<img src="https://img.youtube.com/vi/n7iT5r0Sl_Y/maxresdefault.jpg" alt="Video thumbnail" width="600" />
 
 ## Video Information
 

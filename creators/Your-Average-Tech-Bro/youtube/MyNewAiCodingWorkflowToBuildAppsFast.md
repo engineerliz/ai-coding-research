@@ -1,5 +1,5 @@
 # My New AI Coding Workflow To Build Apps Fast (Goodbye Cursor, Hello Claude Code)
-![Video thumbnail](https://img.youtube.com/vi/wsIb_EdhcY8/maxresdefault.jpg)
+<img src="https://img.youtube.com/vi/wsIb_EdhcY8/maxresdefault.jpg" alt="Video thumbnail" width="600" />
 
 ## Video Information
 

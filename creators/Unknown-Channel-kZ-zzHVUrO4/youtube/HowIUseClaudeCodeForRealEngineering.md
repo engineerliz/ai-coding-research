@@ -1,5 +1,5 @@
 # How I use Claude Code for real engineering
-![Video thumbnail](https://img.youtube.com/vi/kZ-zzHVUrO4/maxresdefault.jpg)
+<img src="https://img.youtube.com/vi/kZ-zzHVUrO4/maxresdefault.jpg" alt="Video thumbnail" width="600" />
 
 ## Video Information
 

@@ -1,5 +1,5 @@
 # Sharing My AI-Powered Coding Workflow To Build Apps REALLY Fast
-![Video thumbnail](https://img.youtube.com/vi/LvsgCdWss4I/maxresdefault.jpg)
+<img src="https://img.youtube.com/vi/LvsgCdWss4I/maxresdefault.jpg" alt="Video thumbnail" width="600" />
 
 ## Video Information
 

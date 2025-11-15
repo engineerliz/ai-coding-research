@@ -1,5 +1,5 @@
 # Cursor vs Claude Code | The Ultimate Comparison Guide
-![Video thumbnail](https://img.youtube.com/vi/OSBo9qcpRfw/maxresdefault.jpg)
+<img src="https://img.youtube.com/vi/OSBo9qcpRfw/maxresdefault.jpg" alt="Video thumbnail" width="600" />
 
 ## Video Information
 

@@ -1,5 +1,5 @@
 # You've Been Using AI the Hard Way (Use This Instead)
-![Video thumbnail](https://img.youtube.com/vi/MsQACpcuTkU/maxresdefault.jpg)
+<img src="https://img.youtube.com/vi/MsQACpcuTkU/maxresdefault.jpg" alt="Video thumbnail" width="600" />
 
 ## Video Information
 
