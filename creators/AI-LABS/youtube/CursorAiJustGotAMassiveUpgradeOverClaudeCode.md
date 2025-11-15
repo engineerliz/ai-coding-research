@@ -23,7 +23,11 @@ This video discusses how Cursor AI has received a massive upgrade that puts it a
 
 ### Common Themes
 
-[Needs detailed analysis - Likely includes discussions about new Cursor features, comparisons with Claude Code, debates about which tool is better, feature requests]
+Commenters fixate on usage limits and pricing pain on both Cursor and Claude Code, with several heavy users sharing how fast they burn through credits and why they're considering switching tools. A second cluster of remarks debates workflow depth: some want full workflow demos or features like Claude Skills, while others argue Cursor’s auto mode, CLI, or IDE flexibility make it more practical for large codebases. The tone swings between excitement about Cursor’s upgrades and skepticism about its cost structure or whether it can surpass agent-style tools.
+
+- **Repeating themes:** subscription caps, requests for full workflow tutorials, comparisons between Cursor auto mode, Claude Skills, Windsurf, Codex, and CLI availability, plus questions about remote sessions and terminal control.
+- **Criticisms:** pricing called “too expensive,” accusations of shadiness or shilling, concerns over limited team plans, lack of Claude Skills equivalents, and doubts that Cursor can keep up with native agents.
+- **Praise:** fans highlight unlimited auto mode, high-quality edits without credit drawdown, Cursor IDE + CLI flexibility, and its suitability for heavy coders who outgrow Claude Code’s 5-hour window.
 
 
 

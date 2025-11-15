@@ -22,7 +22,11 @@ This video provides a comprehensive guide to using Cursor AI for "vibe coding" a
 
 ### Common Themes
 
-[Needs detailed analysis - Discussions about "vibe coding" concept, Cursor's intuitive interface, workflow improvements, comparisons with traditional coding]
+The comments read like a help desk for beginners “vibe coding” their first apps: people ask whether to pick Cursor, Codex, Claude, or Google AI Studio, how to migrate projects from Replit or App Builder, and how to avoid surprise cloud bills. There’s palpable enthusiasm for Cursor’s ownership of code and rapid UI work, yet lots of anxiety about pricing tiers, API usage, and deployment complexity, especially for older or non-traditional students. Fans repeatedly urge Corbin to produce more walkthroughs (Google-only builds, Cursor CLI, Codex integrations) to demystify the stack.
+
+- **Repeating themes:** tool selection for newbies (Cursor vs Codex vs Claude vs Replit/Google), pricing/usage fears, deployment workflows, request for step-by-step migrations, subscription tier questions, and excitement about Cursor 2.0 pace.
+- **Criticisms:** Cursor called expensive with limited free usage; some lament lacking 1-click deploy like Replit or fear misconfiguring APIs and getting charged; others worry Cursor can’t match Codex’s high-end models without integrations.
+- **Praise:** Many credit Cursor with letting non-coders ship full apps, rave about ownership/control versus hosted builders, applaud its multi-agent speed, and thank the creator for making intimidating workflows feel approachable.
 
 
 

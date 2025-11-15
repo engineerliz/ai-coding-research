@@ -21,7 +21,11 @@ The video demonstrates an AI-powered coding workflow using Cursor to build apps 
 
 ### Common Themes
 
-[Needs detailed analysis - Viewers appear to appreciate the practical demonstration and express interest in trying Cursor]
+The audience is hungry for deeper process breakdowns: they ask for end-to-end demos showing how Magic Patterns, Supabase MCPs, and Cursor rules flow together, and they swap tips about starting in Bolt then handing off to Cursor for serious engineering. Pricing, cost-per-app, and model selection loom large, especially among indie founders worried about misconfiguring APIs or exceeding Cursor usage caps. Alongside earnest questions sit lighthearted quips about Cursor “acting on its own,” showing both affection and mild frustration with autonomous behaviors.
+
+- **Repeating themes:** workflow requests (screenshots + MCP + rules), cost transparency (subscriptions, Supabase, Magic Pattern), when to reset chats, how much code is AI vs human, and comparisons with Claude, Copilot, Gemini.
+- **Criticisms:** Cursor blamed for acting autonomously, forgetting stack preferences, or lacking clear pricing guidance; some viewers fear unexpected bills or still prefer sticking with Claude-only setups.
+- **Praise:** Cursor celebrated for rapid UI-building, integration with Supabase and Magic Patterns, and making advanced stacks accessible; fans thank the creator for practical prompts like the “95% confidence” finalizer.
 
 
 
