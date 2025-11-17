@@ -1,5 +1,9 @@
 # Overview
 
+This directory contains research and analysis of YouTube videos from content creators covering AI coding tools and assistants, primarily focusing on Cursor, Claude Code, and related AI development tools. Each creator has their own subdirectory containing markdown files for individual video analyses, including video metadata, summaries, and curated comments from viewers.
+
+The videos are organized by creator/channel, and this README synthesizes insights from YouTube comments across all videos, categorized by key themes: **Code Quality**, **Capabilities and Features**, and **Pricing**. This provides a comprehensive view of how the developer community perceives and discusses these AI coding tools based on real user feedback and experiences shared in video comments.
+
 # Themes from Youtube Comments
 
 ## Code Quality 
