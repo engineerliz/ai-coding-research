@@ -297,6 +297,16 @@ def format_number(num_str: str) -> str:
         return str(num_str)
 
 
+def format_posted_date(video: Dict) -> str:
+    """Format video posted date as MM/DD/YYYY."""
+    published_str = video['snippet'].get('publishedAt', '')
+    try:
+        published = datetime.fromisoformat(published_str.replace('Z', '+00:00'))
+        return published.strftime('%m/%d/%Y')
+    except (ValueError, AttributeError):
+        return '-'
+
+
 def generate_posting_frequency_chart(all_videos: List[Dict]) -> str:
     """Generate Mermaid bar chart for posting frequency over the last 12 months."""
     from collections import defaultdict
@@ -372,12 +382,12 @@ def generate_markdown(company_name: str, channel_data: Dict) -> str:
     
     # Long-form videos table
     md += "## Long-form Videos\n\n"
-    md += "| Title | Summary | Views |\n"
-    md += "|-------|---------|-------|\n"
+    md += "| Title | Summary | Views | Posted Date |\n"
+    md += "|-------|---------|-------|-------------|\n"
     
     top_long_form = long_form[:10]
     if not top_long_form:
-        md += "| *No long-form videos found* | - | - |\n"
+        md += "| *No long-form videos found* | - | - | - |\n"
     else:
         for video in top_long_form:
             title = video['snippet'].get('title', 'Untitled').replace('|', '\\|').replace('\n', ' ')
@@ -385,19 +395,20 @@ def generate_markdown(company_name: str, channel_data: Dict) -> str:
             url = f"https://www.youtube.com/watch?v={video_id}"
             summary = generate_summary(video).replace('|', '\\|').replace('\n', ' ')
             views = format_number(video['statistics'].get('viewCount', '0'))
-            md += f"| [{title}]({url}) | {summary} | {views} |\n"
+            posted_date = format_posted_date(video)
+            md += f"| [{title}]({url}) | {summary} | {views} | {posted_date} |\n"
     
     md += "\n*Top 10 videos by view count*\n\n"
     md += "---\n\n"
     
     # Shorts table
     md += "## Shorts\n\n"
-    md += "| Title | Summary | Views |\n"
-    md += "|-------|---------|-------|\n"
+    md += "| Title | Summary | Views | Posted Date |\n"
+    md += "|-------|---------|-------|-------------|\n"
     
     top_shorts = shorts[:20]
     if not top_shorts:
-        md += "| *No shorts found* | - | - |\n"
+        md += "| *No shorts found* | - | - | - |\n"
     else:
         for video in top_shorts:
             title = video['snippet'].get('title', 'Untitled').replace('|', '\\|').replace('\n', ' ')
@@ -405,7 +416,8 @@ def generate_markdown(company_name: str, channel_data: Dict) -> str:
             url = f"https://www.youtube.com/watch?v={video_id}"
             summary = generate_summary(video).replace('|', '\\|').replace('\n', ' ')
             views = format_number(video['statistics'].get('viewCount', '0'))
-            md += f"| [{title}]({url}) | {summary} | {views} |\n"
+            posted_date = format_posted_date(video)
+            md += f"| [{title}]({url}) | {summary} | {views} | {posted_date} |\n"
     
     md += "\n*Top 20 shorts by view count*\n\n"
     md += "---\n\n"

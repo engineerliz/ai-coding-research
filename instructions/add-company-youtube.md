@@ -108,10 +108,10 @@ xychart-beta
 
 ## Long-form Videos
 
-| Title | Summary | Views |
-|-------|---------|-------|
-| [{Video Title}](https://www.youtube.com/watch?v={VideoID}) | {2-3 sentence summary} | {view_count} |
-| ... | ... | ... |
+| Title | Summary | Views | Posted Date |
+|-------|---------|-------|-------------|
+| [{Video Title}](https://www.youtube.com/watch?v={VideoID}) | {2-3 sentence summary} | {view_count} | {MM/DD/YYYY} |
+| ... | ... | ... | ... |
 
 *Top 10 videos by view count*
 
@@ -119,10 +119,10 @@ xychart-beta
 
 ## Shorts
 
-| Title | Summary | Views |
-|-------|---------|-------|
-| [{Video Title}](https://www.youtube.com/watch?v={VideoID}) | {2-3 sentence summary} | {view_count} |
-| ... | ... | ... |
+| Title | Summary | Views | Posted Date |
+|-------|---------|-------|-------------|
+| [{Video Title}](https://www.youtube.com/watch?v={VideoID}) | {2-3 sentence summary} | {view_count} | {MM/DD/YYYY} |
+| ... | ... | ... | ... |
 
 *Top 20 shorts by view count*
 
@@ -147,12 +147,12 @@ xychart-beta
 
 3. **Long-form Videos Section**:
    - Table with top 10 videos sorted by view count (descending)
-   - Columns: Title (hyperlink to YouTube), Summary (2-3 sentences), Views (formatted with commas)
+   - Columns: Title (hyperlink to YouTube), Summary (2-3 sentences), Views (formatted with commas), Posted Date (MM/DD/YYYY)
    - Include note: "*Top 10 videos by view count*"
 
 4. **Shorts Section**:
    - Table with top 20 shorts sorted by view count (descending)
-   - Columns: Title (hyperlink to YouTube), Summary (2-3 sentences), Views (formatted with commas)
+   - Columns: Title (hyperlink to YouTube), Summary (2-3 sentences), Views (formatted with commas), Posted Date (MM/DD/YYYY)
    - Include note: "*Top 20 shorts by view count*"
 
 5. **Last Updated**:
