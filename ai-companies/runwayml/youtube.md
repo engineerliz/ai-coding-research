@@ -5,7 +5,7 @@
 - **Subscribers**: 121,000
 - **Total Videos**: 86
 - **Long-form Videos**: 67
-- **Shorts**: 8
+- **Shorts**: 0
 - **Posts in Last 2 Months**: 1
 
 ---
