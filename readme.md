@@ -50,6 +50,34 @@ Documentation and scripts for managing and extending the repository:
 
 ### Adding New Content
 
+#### Setting Up Your YouTube API Key
+
+To use the scripts in this repository, you'll need a YouTube Data API v3 key. Follow these steps:
+
+1. **Create a Google Cloud Project** (if you don't have one):
+   - Go to the [Google Cloud Console](https://console.cloud.google.com/)
+   - Click "Select a project" → "New Project"
+   - Enter a project name and click "Create"
+
+2. **Enable the YouTube Data API v3**:
+   - In the Google Cloud Console, navigate to "APIs & Services" → "Library"
+   - Search for "YouTube Data API v3"
+   - Click on it and press "Enable"
+
+3. **Create an API Key**:
+   - Go to "APIs & Services" → "Credentials"
+   - Click "Create Credentials" → "API Key"
+   - Copy the generated API key
+
+4. **Create your `.env` file**:
+   - Create a `.env` file in the root directory of this repository
+   - Add the following line (replace `<your api key>` with your actual API key):
+   ```
+   YOUTUBE_API_KEY=<your api key>
+   ```
+
+   **Note**: Make sure to add `.env` to your `.gitignore` file to keep your API key secure and avoid committing it to version control.
+
 1. **Add a New AI Company**: Follow [`instructions/add-company-youtube.md`](./instructions/add-company-youtube.md) to track a new company's YouTube channel.
 
 2. **Add a New Creator Video**: Follow [`instructions/add-new-youtube-video.md`](./instructions/add-new-youtube-video.md) to analyze a new YouTube video from a content creator.
