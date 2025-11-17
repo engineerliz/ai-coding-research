@@ -160,7 +160,31 @@ xychart-beta
 
 ---
 
-## 6. Verification Checklist
+## 6. Update README Table
+
+After successfully generating the `youtube.md` file, update the main README table to include the new company:
+
+1. Open `/Users/liz/dev/cursor-research/ai-companies/readme.md`
+2. Locate the "YouTube Channels" table
+3. Extract the following information from the newly created `youtube.md` file's Overview section:
+   - **Subscribers**: The subscriber count (with commas)
+   - **Total Videos**: Total number of videos
+   - **Long-form Videos**: Number of long-form videos
+   - **Shorts**: Number of shorts
+   - **Posts in Last 2 Months**: Number of recent posts
+4. Add a new row to the table with the company name and all the extracted statistics
+5. Keep the table sorted alphabetically by company name
+
+**Example:**
+If you just added "Example Company" with 50,000 subscribers, 100 total videos, 80 long-form, 20 shorts, and 5 recent posts, add this row (in alphabetical order):
+
+```markdown
+| Example Company | 50,000 | 100 | 80 | 20 | 5 |
+```
+
+---
+
+## 7. Verification Checklist
 
 - [ ] Directory `ai-companies/{company-name}/` exists
 - [ ] `youtube.md` file exists at the correct path
@@ -173,18 +197,20 @@ xychart-beta
 - [ ] View counts are formatted with commas
 - [ ] Videos are sorted by view count (descending)
 - [ ] Last updated date is included
+- [ ] README table at `ai-companies/readme.md` has been updated with the new company's statistics
+- [ ] Company row in README table is in alphabetical order
 
 ---
 
-## 7. Commit Guidance
+## 8. Commit Guidance
 
-1. `git status` to review additions (expect one `youtube.md` file).
+1. `git status` to review additions (expect `youtube.md` file and updated `readme.md`).
 2. Commit message suggestion: `add {company-name} youtube channel research`.
 3. Push or draft PR as usual.
 
 ---
 
-## 8. Troubleshooting
+## 9. Troubleshooting
 
 ### Script Errors
 
@@ -201,7 +227,7 @@ If you need to manually edit the generated markdown:
 
 ---
 
-## 9. FAQs
+## 10. FAQs
 
 - **Q: How do I find a channel ID?**  
   A: You can find it in the channel URL (e.g., `youtube.com/channel/UC...`) or use the YouTube Data API to search by channel username/name.
