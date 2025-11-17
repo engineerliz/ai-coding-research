@@ -34,10 +34,18 @@ except ImportError:
     sys.exit(1)
 
 # Load environment variables from .env file
+# Check root directory first, then scripts directory
 if load_dotenv:
-    env_path = Path(__file__).parent / '.env'
-    if env_path.exists():
-        load_dotenv(dotenv_path=env_path)
+    script_dir = Path(__file__).parent
+    repo_root = script_dir.parent.parent  # instructions/scripts -> instructions -> root
+    root_env = repo_root / '.env'
+    scripts_env = script_dir / '.env'
+    
+    # Try root directory first, then scripts directory
+    if root_env.exists():
+        load_dotenv(dotenv_path=root_env)
+    elif scripts_env.exists():
+        load_dotenv(dotenv_path=scripts_env)
 
 
 def get_youtube_service(api_key: str):

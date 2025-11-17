@@ -25,7 +25,7 @@ This playbook walks you through adding research on an AI company's YouTube chann
 1. Ensure you have a YouTube Data API v3 key set in your environment:
    - Check for `YOUTUBE_API_KEY` environment variable or `.env` file.
    - If missing, get a key from: https://console.cloud.google.com/
-   - Add it to `.env` file in the `instructions/scripts/` directory: `YOUTUBE_API_KEY=your-actual-key-here`
+   - Add it to `.env` file in the root directory: `YOUTUBE_API_KEY=your-actual-key-here`
    - Or set as environment variable: `export YOUTUBE_API_KEY='your-key-here'`
 
 2. Install required Python packages (if not already installed):
@@ -167,7 +167,7 @@ The script creates `/Users/liz/dev/cursor-research/ai-companies/{company-name}/y
 
 ### Script Errors
 
-- **"YOUTUBE_API_KEY not set"**: Make sure you've set the API key in your environment or `.env` file.
+- **"YOUTUBE_API_KEY not set"**: Make sure you've set the API key in your environment or `.env` file in the root directory.
 - **"Channel not found"**: Verify the channel ID or URL is correct. The script can handle channel IDs (UC...), channel URLs, or usernames.
 - **"Quota exceeded"**: YouTube Data API has daily quotas. Wait until the quota resets or request an increase in Google Cloud Console.
 - **"No videos found"**: The channel might be empty or private. Check the channel manually on YouTube.
