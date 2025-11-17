@@ -9,9 +9,9 @@ This playbook walks you through adding research on an AI company's social media 
 1. Get the company name (e.g., "Anthropic", "OpenAI", "Cursor").
 2. Identify the company directory name (kebab case, e.g., `anthropic`, `openai`, `cursor`).
 3. Collect the following information for each platform:
-   - **TikTok**: Account URL/username and follower count
-   - **Instagram**: Account URL/username and follower count
-   - **X (Twitter)**: Account URL/username and follower count
+   - **TikTok**: Account URL/username, follower count, and video/post count
+   - **Instagram**: Account URL/username, follower count, and post count
+   - **X (Twitter)**: Account URL/username, follower count, and tweet/post count
 
 ---
 
@@ -20,7 +20,6 @@ This playbook walks you through adding research on an AI company's social media 
 1. Confirm the company directory exists at `/Users/liz/dev/cursor-research/ai-companies/{company-name}/`.  
    - If missing, create it (including intermediate folders).
 2. Create the `socials.md` file at `/Users/liz/dev/cursor-research/ai-companies/{company-name}/socials.md`.
-3. Create or update the `shortform.md` file at `/Users/liz/dev/cursor-research/ai-companies/{company-name}/shortform.md`.
 
 ---
 
@@ -58,43 +57,7 @@ Create a markdown file at `/Users/liz/dev/cursor-research/ai-companies/{company-
 
 ---
 
-## 4. Create or Update shortform.md File
-
-Create or update a markdown file at `/Users/liz/dev/cursor-research/ai-companies/{company-name}/shortform.md` with social media statistics.
-
-### Markdown Template
-
-````markdown
-# {Company Name} Short-form Content
-
-## Social Media Statistics
-
-| Platform | Account | Followers |
-|----------|---------|-----------|
-| TikTok | [{@username}]({tiktok_url}) | {follower_count} |
-| Instagram | [{@username}]({instagram_url}) | {follower_count} |
-| X (Twitter) | [{@username}]({x_url}) | {follower_count} |
-
----
-
-**Last Updated**: {MM/DD/YYYY}
-````
-
-### Section Details
-
-1. **Social Media Statistics Table**:
-   - Table with three columns: Platform, Account, Followers
-   - Platform column: Platform name (TikTok, Instagram, X (Twitter))
-   - Account column: Username hyperlinked to the account URL
-   - Followers column: Follower count formatted with commas (e.g., "1,234,567")
-   - If a platform account doesn't exist, write "N/A" in both Account and Followers columns
-
-2. **Last Updated**:
-   - Date when the data was collected (MM/DD/YYYY format)
-
----
-
-## 5. Finding Social Media Accounts
+## 4. Finding Social Media Accounts
 
 ### TikTok
 - Search for the company name on TikTok
@@ -116,23 +79,51 @@ Create or update a markdown file at `/Users/liz/dev/cursor-research/ai-companies
 
 ---
 
+## 5. Update README Table
+
+After successfully creating the `socials.md` file, update the main README table to include the new company:
+
+1. Open `/Users/liz/dev/cursor-research/ai-companies/readme.md`
+2. Locate the "Company Social Accounts" table
+3. Extract the following information from the newly created `socials.md` file's Overview section:
+   - **X (Twitter)**: Follower count (with commas, e.g., "1,234,567")
+   - **Instagram**: Follower count (with commas)
+   - **TikTok**: Follower count (with commas)
+4. Add a new row to the table with:
+   - Company name hyperlinked to `{company-name}/socials.md`
+   - X follower count (or "N/A" if account doesn't exist)
+   - Instagram follower count (or "N/A" if account doesn't exist)
+   - TikTok follower count (or "N/A" if account doesn't exist)
+5. Keep the table sorted alphabetically by company name
+
+**Example:**
+If you just added "Example Company" with 100,000 X followers, 75,000 Instagram followers, and 50,000 TikTok followers, add this row (in alphabetical order):
+
+```markdown
+| [Example Company](example-company/socials.md) | 100,000 | 75,000 | 50,000 |
+```
+
+---
+
 ## 6. Verification Checklist
 
 - [ ] Directory `ai-companies/{company-name}/` exists
 - [ ] `socials.md` file exists at the correct path
-- [ ] `shortform.md` file exists at the correct path
-- [ ] All three platforms (TikTok, Instagram, X) are included in both files
+- [ ] All three platforms (TikTok, Instagram, X) are included in the file
 - [ ] All account URLs are valid and hyperlinked correctly
 - [ ] Follower counts are formatted with commas
+- [ ] Post counts are included and formatted with commas
 - [ ] If a platform account doesn't exist, "N/A" is used appropriately
-- [ ] Last updated date is included in both files
+- [ ] Last updated date is included in the file
 - [ ] Date format is MM/DD/YYYY
+- [ ] README table at `ai-companies/readme.md` has been updated with the new company's social media statistics
+- [ ] Company row in README table is in alphabetical order
 
 ---
 
 ## 7. Commit Guidance
 
-1. `git status` to review additions (expect `socials.md` and `shortform.md` files).
+1. `git status` to review additions (expect `socials.md` file and updated `readme.md`).
 2. Commit message suggestion: `add {company-name} social media research`.
 3. Push or draft PR as usual.
 
@@ -160,29 +151,18 @@ For a company called "Example AI" with:
 **Last Updated**: 12/15/2024
 ````
 
-**shortform.md**:
-````markdown
-# Example AI Short-form Content
+**README table update** (add this row to `ai-companies/readme.md` in the "Company Social Accounts" table, in alphabetical order):
 
-## Social Media Statistics
-
-| Platform | Account | Followers |
-|----------|---------|-----------|
-| TikTok | [@exampleai](https://www.tiktok.com/@exampleai) | 50,000 |
-| Instagram | [@exampleai](https://www.instagram.com/exampleai/) | 75,000 |
-| X (Twitter) | [@exampleai](https://x.com/exampleai) | 100,000 |
-
----
-
-**Last Updated**: 12/15/2024
-````
+```markdown
+| [Example AI](example-ai/socials.md) | 100,000 | 75,000 | 50,000 |
+```
 
 ---
 
 ## 9. FAQs
 
 - **Q: What if a company doesn't have an account on one of the platforms?**  
-  A: Use "N/A" for both the account link and follower count in both files.
+  A: Use "N/A" for both the account link and follower count in the file.
 
 - **Q: How do I find the exact follower count?**  
   A: Visit the platform's profile page. The follower count is typically displayed prominently. Note that follower counts change frequently, so record the count at the time of data collection.
@@ -191,7 +171,10 @@ For a company called "Example AI" with:
   A: Use the main/primary account for the company. If there's a clear main account (usually verified and with the company name), use that one.
 
 - **Q: Should I update follower counts regularly?**  
-  A: Update the "Last Updated" date whenever you refresh the follower counts. Consider setting a schedule (e.g., monthly) to keep data current.
+  A: Update the "Last Updated" date whenever you refresh the follower counts and post counts. Consider setting a schedule (e.g., monthly) to keep data current.
+
+- **Q: How do I update the README table?**  
+  A: Extract the follower counts from the `socials.md` file's Overview section. Add a new row with the company name hyperlinked to `{company-name}/socials.md`, followed by the three follower counts (X, Instagram, TikTok) in that order. Keep the table sorted alphabetically by company name.
 
 ---
 
