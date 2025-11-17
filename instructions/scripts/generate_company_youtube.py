@@ -297,6 +297,58 @@ def format_number(num_str: str) -> str:
         return str(num_str)
 
 
+def generate_posting_frequency_chart(all_videos: List[Dict]) -> str:
+    """Generate Mermaid bar chart for posting frequency over the last 12 months."""
+    from collections import defaultdict
+    
+    # Get last 12 months using proper date arithmetic
+    now = datetime.now()
+    months = []
+    for i in range(11, -1, -1):  # Last 12 months, most recent first
+        # Calculate month by subtracting months
+        target_year = now.year
+        target_month = now.month - i
+        while target_month <= 0:
+            target_month += 12
+            target_year -= 1
+        month_date = datetime(target_year, target_month, 1)
+        months.append(month_date.strftime('%b %Y'))
+    
+    # Initialize counts for all months
+    month_counts = defaultdict(int)
+    for month in months:
+        month_counts[month] = 0
+    
+    # Count videos per month
+    for video in all_videos:
+        published_str = video['snippet'].get('publishedAt', '')
+        try:
+            published = datetime.fromisoformat(published_str.replace('Z', '+00:00'))
+            month_key = published.strftime('%b %Y')
+            
+            # Only count if within last 12 months
+            if month_key in month_counts:
+                month_counts[month_key] += 1
+        except (ValueError, AttributeError):
+            continue
+    
+    # Get counts in order
+    counts = [month_counts[month] for month in months]
+    max_count = max(counts) if counts else 1
+    y_max = max_count + 2 if max_count > 0 else 5
+    
+    # Generate Mermaid chart
+    chart = "```mermaid\n"
+    chart += "xychart-beta\n"
+    chart += '    title "Videos Posted Per Month (Last 12 Months)"\n'
+    chart += f'    x-axis [{", ".join(months)}]\n'
+    chart += f'    y-axis "Number of Videos" 0 --> {y_max}\n'
+    chart += f'    bar [{", ".join(map(str, counts))}]\n'
+    chart += "```\n"
+    
+    return chart
+
+
 def generate_markdown(company_name: str, channel_data: Dict) -> str:
     """Generate markdown content."""
     stats = channel_data['stats']
@@ -311,6 +363,12 @@ def generate_markdown(company_name: str, channel_data: Dict) -> str:
     md += f"- **Shorts**: {len(shorts)}\n"
     md += f"- **Posts in Last 2 Months**: {channel_data['recent_count']}\n\n"
     md += "---\n\n"
+    
+    # Posting frequency chart
+    md += "## Posting Frequency Over Time\n\n"
+    all_videos = long_form + shorts
+    md += generate_posting_frequency_chart(all_videos)
+    md += "\n---\n\n"
     
     # Long-form videos table
     md += "## Long-form Videos\n\n"

@@ -66,9 +66,10 @@ The script will:
 2. Retrieve all videos from the channel
 3. Categorize videos into long-form (>60 seconds) and shorts (≤60 seconds)
 4. Count recent posts (last 2 months)
-5. Sort videos by view count
-6. Generate summaries from video titles and descriptions
-7. Create the markdown file at `/Users/liz/dev/cursor-research/ai-companies/{company-name}/youtube.md`
+5. Generate a Mermaid bar chart showing posting frequency per month for the last 12 months
+6. Sort videos by view count
+7. Generate summaries from video titles and descriptions
+8. Create the markdown file at `/Users/liz/dev/cursor-research/ai-companies/{company-name}/youtube.md`
 
 ---
 
@@ -88,6 +89,20 @@ The script creates `/Users/liz/dev/cursor-research/ai-companies/{company-name}/y
 - **Long-form Videos**: {long_form_count}
 - **Shorts**: {shorts_count}
 - **Posts in Last 2 Months**: {recent_posts_count}
+
+---
+
+## Posting Frequency Over Time
+
+```mermaid
+xychart-beta
+    title "Videos Posted Per Month (Last 12 Months)"
+    x-axis [Jan 2024, Feb 2024, Mar 2024, Apr 2024, May 2024, Jun 2024, Jul 2024, Aug 2024, Sep 2024, Oct 2024, Nov 2024, Dec 2024]
+    y-axis "Number of Videos" 0 --> 10
+    bar [3, 5, 4, 6, 8, 7, 5, 4, 6, 5, 4, 3]
+```
+
+*Bar chart showing the number of videos posted per month over the last 12 months*
 
 ---
 
@@ -125,17 +140,22 @@ The script creates `/Users/liz/dev/cursor-research/ai-companies/{company-name}/y
    - Total number of shorts (duration ≤ 60 seconds)
    - Number of videos posted in the last 2 months
 
-2. **Long-form Videos Section**:
+2. **Posting Frequency Over Time Section**:
+   - Mermaid bar chart showing the number of videos posted per month for the last 12 months
+   - Automatically generated from video publish dates
+   - Displays all videos (both long-form and shorts) combined
+
+3. **Long-form Videos Section**:
    - Table with top 10 videos sorted by view count (descending)
    - Columns: Title (hyperlink to YouTube), Summary (2-3 sentences), Views (formatted with commas)
    - Include note: "*Top 10 videos by view count*"
 
-3. **Shorts Section**:
+4. **Shorts Section**:
    - Table with top 20 shorts sorted by view count (descending)
    - Columns: Title (hyperlink to YouTube), Summary (2-3 sentences), Views (formatted with commas)
    - Include note: "*Top 20 shorts by view count*"
 
-4. **Last Updated**:
+5. **Last Updated**:
    - Date when the data was collected (MM/DD/YYYY format)
 
 ---
@@ -145,6 +165,7 @@ The script creates `/Users/liz/dev/cursor-research/ai-companies/{company-name}/y
 - [ ] Directory `ai-companies/{company-name}/` exists
 - [ ] `youtube.md` file exists at the correct path
 - [ ] Overview section includes all required metrics
+- [ ] Posting frequency chart shows last 12 months with proper Mermaid syntax
 - [ ] Long-form videos table has exactly 10 rows (or fewer if channel has less)
 - [ ] Shorts table has exactly 20 rows (or fewer if channel has less)
 - [ ] All video titles are hyperlinked to YouTube
