@@ -1,3 +1,8 @@
+# Overview
+
+This directory contains research and analytics tracking for AI companies' official YouTube channels. Each company has its own subdirectory with detailed YouTube channel statistics, including subscriber counts, video metrics (total videos, long-form content, shorts), posting frequency, and engagement analytics over time.
+
+The data provides insights into how major AI companies (such as OpenAI, Anthropic, Cursor AI, and others) leverage YouTube for marketing, product announcements, tutorials, and community engagement. The analytics track posting patterns, content formats, and activity levels to understand these companies' video content strategies and audience reach.
 
 # YouTube Channels
 
