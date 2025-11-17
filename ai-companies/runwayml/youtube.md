@@ -41,21 +41,4 @@ xychart-beta
 
 ---
 
-## Shorts
-
-| Title | Summary | Views | Posted Date |
-|-------|---------|-------|-------------|
-| [Using 3D Assets with Gen-4 + References \| Runway](https://www.youtube.com/watch?v=Le-x_xkNe1c) | Using 3D Assets with Gen-4 + References \| Runway. Using 3D assets with Gen-4 References is a simple way to bring highly detailed and specific models into your generative workflows for even more consistency and control. | 50,993 | 05/05/2025 |
-| [Using 3D Assets with Gen-4 + References \| Runway](https://www.youtube.com/watch?v=yYMpI3208ts) | Using 3D Assets with Gen-4 + References \| Runway. With Gen-4 References you can use 3D models to quickly position objects exactly where you want them. With just three images: a location, a 3D asset and a style reference, you can generate highly refined outputs without any rigging, texturing or re... | 45,994 | 05/06/2025 |
-| [Introducing: Runway for Mobile](https://www.youtube.com/watch?v=At3kSthUM_k) | Introducing: Runway for Mobile. The magic of Gen-1. Now on your phone. Download the new Runway iOS app today: https://apple.co/41zhB5B | 33,153 | 04/24/2023 |
-| [New Ways to Make the Impossible \| Runway](https://www.youtube.com/watch?v=6vK0S5C-wj8) | New Ways to Make the Impossible \| Runway. New year. New magic. New ways to Make the Impossible. What will you make in 2023? | 13,119 | 12/21/2022 |
-| [AI Film Festival 2023 \| Runway](https://www.youtube.com/watch?v=sObLB1FWL9w) | AI Film Festival 2023 \| Runway. Introducing the first annual AI Film Festival. A celebration of the art and artists making the impossible at the forefront of AI filmmaking. Submissions open until January 15th, 2023. Learn more about AI Film Festival and submit your videos at runwayml.com/aiff | 10,140 | 12/07/2022 |
-| [AI Film Festival 2024 \| Runway Studios](https://www.youtube.com/watch?v=tbuZXvNrXYM) | AI Film Festival 2024 \| Runway Studios. AI Film Festival 2024 \| Runway Studios | 8,142 | 09/07/2023 |
-| [The 3rd Annual AI Film Festival: Submissions Open \| Runway](https://www.youtube.com/watch?v=5T9oMubPbcI) | The 3rd Annual AI Film Festival: Submissions Open \| Runway. The third annual international AI Film Festival returns this spring to New York and LA to celebrate artists at the forefront of technology and film. Submissions are now closed. | 5,511 | 10/15/2024 |
-| [Introducing Creative Grants \| Runway Studios](https://www.youtube.com/watch?v=OBPi3KWy6ag) | Introducing Creative Grants \| Runway Studios. Introducing, Runway Studios Creative Grants. A new initiative designed to give filmmakers everywhere the production support they need to realize their creative vision with AI. | 5,229 | 02/23/2023 |
-
-*Top 20 shorts by view count*
-
----
-
 **Last Updated**: 11/16/2025

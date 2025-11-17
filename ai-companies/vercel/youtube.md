@@ -41,14 +41,4 @@ xychart-beta
 
 ---
 
-## Shorts
-
-| Title | Summary | Views | Posted Date |
-|-------|---------|-------|-------------|
-| [Introducing commenting on Preview Deployments](https://www.youtube.com/watch?v=KaMZ23C96yw) | Introducing commenting on Preview Deployments. Collaborate on your frontend, faster. Enable comments on Preview Deployments in your projects today to get started. Now in public beta. Learn more: https://vercel.fyi/5GHWFO5 | 99,438 | 09/22/2022 |
-
-*Top 20 shorts by view count*
-
----
-
 **Last Updated**: 11/16/2025

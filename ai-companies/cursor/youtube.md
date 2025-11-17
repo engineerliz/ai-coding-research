@@ -41,14 +41,4 @@ xychart-beta
 
 ---
 
-## Shorts
-
-| Title | Summary | Views | Posted Date |
-|-------|---------|-------|-------------|
-| *No shorts found* | - | - | - |
-
-*Top 20 shorts by view count*
-
----
-
 **Last Updated**: 11/16/2025
