@@ -1,5 +1,5 @@
 ## Goal
-Add a `README.md` in every creator directory under `/Users/liz/dev/cursor-research/creators` that documents key details for that creator.
+Add a `README.md` in every creator directory under `creators/` that documents key details for that creator.
 
 ## Required Sections
 1. **Overview**

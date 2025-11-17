@@ -14,9 +14,9 @@ This playbook walks you through adding research on an AI company's YouTube chann
 
 ## 2. Create Directory Structure
 
-1. Confirm the company directory exists at `/Users/liz/dev/cursor-research/ai-companies/{company-name}/`.  
+1. Confirm the company directory exists at `ai-companies/{company-name}/`.  
    - If missing, create it (including intermediate folders).
-2. Create or update the `youtube.md` file at `/Users/liz/dev/cursor-research/ai-companies/{company-name}/youtube.md`.
+2. Create or update the `youtube.md` file at `ai-companies/{company-name}/youtube.md`.
 
 ---
 
@@ -40,7 +40,6 @@ This playbook walks you through adding research on an AI company's YouTube chann
 Use the provided script to automatically fetch channel data and generate the markdown file:
 
 ```bash
-cd /Users/liz/dev/cursor-research
 python instructions/scripts/generate_company_youtube.py <channel_id_or_url> <company_name> [company_dir]
 ```
 
@@ -69,13 +68,13 @@ The script will:
 5. Generate a Mermaid bar chart showing posting frequency per month for the last 12 months
 6. Sort videos by view count
 7. Generate summaries from video titles and descriptions
-8. Create the markdown file at `/Users/liz/dev/cursor-research/ai-companies/{company-name}/youtube.md`
+8. Create the markdown file at `ai-companies/{company-name}/youtube.md`
 
 ---
 
 ## 5. Verify the Generated Markdown File
 
-The script creates `/Users/liz/dev/cursor-research/ai-companies/{company-name}/youtube.md` with the following structure:
+The script creates `ai-companies/{company-name}/youtube.md` with the following structure:
 
 ### Markdown Template
 
@@ -164,7 +163,7 @@ xychart-beta
 
 After successfully generating the `youtube.md` file, update the main README table to include the new company:
 
-1. Open `/Users/liz/dev/cursor-research/ai-companies/readme.md`
+1. Open `ai-companies/readme.md`
 2. Locate the "YouTube Channels" table
 3. Extract the following information from the newly created `youtube.md` file's Overview section:
    - **Subscribers**: The subscriber count (with commas)

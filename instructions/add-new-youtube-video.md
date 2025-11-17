@@ -15,7 +15,7 @@ This playbook walks you through adding a fresh video analysis entry to the repo 
 
 ## 2. Create Directory Structure
 
-1. Confirm the creator directory exists at `/Users/liz/dev/cursor-research/creators/{Creator-Name}/youtube`.  
+1. Confirm the creator directory exists at `creators/{Creator-Name}/youtube`.  
    - If missing, create it (including intermediate folders).
 2. Inside `youtube/`, create a subdirectory named after the video title converted to Pascal-kebab case (match existing examples):  
    - Example: `How I use Claude Code for real engineering` → `HowIUseClaudeCodeForRealEngineering`.
@@ -41,7 +41,7 @@ This playbook walks you through adding a fresh video analysis entry to the repo 
      3. `Criticisms:` bullet list calling out issues raised about AI coding tools.  
      4. `Praise:` bullet list for positive takes on AI coding tools.
    - `Notable Comments` table should contain 15–20 rows when possible, sorted by engagement (likes + replies), include the full untruncated comment text, date, and engagement numbers, omit author names, exclude any comments from the channel owner, and show only comments that reference the AI tools listed above.
-5. Save the file as `/Users/liz/dev/cursor-research/creators/{Creator}/youtube/{VideoTitle}.md`.
+5. Save the file as `creators/{Creator}/youtube/{VideoTitle}.md`.
 
 ### Markdown Snippet
 
@@ -99,7 +99,7 @@ This playbook walks you through adding a fresh video analysis entry to the repo 
 ## 4. Add the Video Info JSON
 
 1. Use `yt-dlp --dump-json {YouTube URL}` (or YouTube Data API) to fetch raw metadata.
-2. Save the JSON to `/Users/liz/dev/cursor-research/data/youtube-videos/{VideoID}.info.json`.
+2. Save the JSON to `data/youtube-videos/{VideoID}.info.json`.
 3. Keep the JSON unmodified except for removing transient download-specific paths if necessary.
 4. Confirm the JSON includes at least: `id`, `title`, `uploader`, `upload_date`, `view_count`, `like_count`, `comment_count`, `description`, `thumbnails`.
 
