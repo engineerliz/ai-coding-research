@@ -13,12 +13,6 @@
 | [RunwayML](runwayml/youtube.md) | 121,000 | 86 | 67 | 8 | 1 |
 | [Vercel](vercel/youtube.md) | 110,000 | 357 | 24 | 1 | 0 |
 
-# Company Social Accounts
-| Company | X | Instagram | Tiktok |
-|---------|---|-----------|--------|
-| [Cursor AI](cursor/socials.md) | 275,100 | N/A | N/A |
-| [OpenAI](openai/socials.md) | 2,800,000 | 3,500,000 | 755,100 | 
-
 ## Add a new company
 Give the following prompt to Cursor Agent to add a new company to the repo:
 ```
